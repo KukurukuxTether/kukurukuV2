@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { ReactElement, Suspense, lazy, useEffect } from "react";
 import { lazyWithPreload } from "react-lazy-with-preload";
 import {
@@ -18,6 +19,7 @@ import VideoTesterView from "@/pages/developer/VideoTesterView";
 import { DmcaPage, shouldHaveDmcaPage } from "@/pages/Dmca";
 import { NotFoundPage } from "@/pages/errors/NotFoundPage";
 import { HomePage } from "@/pages/HomePage";
+import { HomePage2 } from "@/pages/HomePage2";
 import { LoginPage } from "@/pages/Login";
 import { OnboardingPage } from "@/pages/onboarding/Onboarding";
 import { OnboardingExtensionPage } from "@/pages/onboarding/OnboardingExtension";
@@ -117,8 +119,10 @@ function App() {
             </LegacyUrlView>
           }
         />
-        <Route path="/browse/:query?" element={<HomePage />} />
-        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/browse/:query?" element={<HomePage />} /> */}
+        <Route path="/browse/:query?" element={<HomePage2 />} />
+        {/* <Route path="/" element={<HomePage />} /> */}
+        <Route path="/" element={<HomePage2 />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<AboutPage />} />

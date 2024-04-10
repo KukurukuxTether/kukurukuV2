@@ -9,6 +9,9 @@ const config: Config = {
   safelist: safeThemeList,
   theme: {
     extend: {
+      colors:{
+        dashBg: "#0F0F0F",
+      },
       /* breakpoints */
       screens: {
         ssm: "400px",

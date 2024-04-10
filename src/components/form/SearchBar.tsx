@@ -5,6 +5,7 @@ import { Flare } from "@/components/utils/Flare";
 
 import { Icon, Icons } from "../Icon";
 import { TextInputControl } from "../text-inputs/TextInputControl";
+import { Media } from "../utils/Media";
 
 export interface SearchBarProps {
   placeholder?: string;
@@ -24,16 +25,16 @@ export const SearchBarInput = forwardRef<HTMLInputElement, SearchBarProps>(
     return (
       <Flare.Base
         className={c({
-          "hover:flare-enabled group flex flex-col rounded-[28px] transition-colors sm:flex-row sm:items-center relative":
+          "hover:flare-enabled group flex flex-col rounded-[1.063rem] transition-colors sm:flex-row sm:items-center relative":
             true,
-          "bg-search-background": !focused,
-          "bg-search-focused": focused,
+          "bg-[#242424]": !focused,
+          "bg-[#14141]": focused,
         })}
       >
         <Flare.Light
           flareSize={400}
           enabled={focused}
-          className="rounded-[28px]"
+          className="rounded-[1.063rem]"
           backgroundClass={c({
             "transition-colors": true,
             "bg-search-background": !focused,
@@ -42,7 +43,7 @@ export const SearchBarInput = forwardRef<HTMLInputElement, SearchBarProps>(
         />
         <Flare.Child className="flex flex-1 flex-col">
           <div className="pointer-events-none absolute bottom-0 left-5 top-0 flex max-h-14 items-center text-search-icon">
-            <Icon icon={Icons.SEARCH} />
+            <Media />
           </div>
 
           <TextInputControl
@@ -54,7 +55,7 @@ export const SearchBarInput = forwardRef<HTMLInputElement, SearchBarProps>(
             onFocus={() => setFocused(true)}
             onChange={(val) => setSearch(val)}
             value={props.value}
-            className="w-full flex-1 bg-transparent px-4 py-4 pl-12 text-search-text placeholder-search-placeholder focus:outline-none sm:py-4 sm:pr-2"
+            className="w-full flex-1 bg-transparent px-4 py-4 pl-[4.5rem] text-search-text focus:outline-none sm:py-4 sm:pr-2"
             placeholder={props.placeholder}
           />
 
