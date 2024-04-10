@@ -86,7 +86,7 @@ export function Navigation(props: NavigationProps) {
               >
                 <BrandPill clickable />
               </Link>
-              <a
+              {/* <a
                 href={conf().DISCORD_LINK}
                 target="_blank"
                 rel="noreferrer"
@@ -101,7 +101,7 @@ export function Navigation(props: NavigationProps) {
                 className="text-xl text-white tabbable rounded-full"
               >
                 <IconPatch icon={Icons.GITHUB} clickable downsized />
-              </a>
+              </a> */}
             </div>
             <div className="relative pointer-events-auto">
               <LinksDropdown>
